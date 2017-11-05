@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nomas.nomas.ActividadPrincipal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"/>
+
+            <ImageView
+                android:layout_marginLeft="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_mas"/>
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lupa_00000"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tools_00000"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="#C6FDFF">
+
+            <LinearLayout
+                android:layout_height="350dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Situación: "
+                    android:textSize="25dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#ffffff"
+                    android:layout_margin="2dp" />
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:textSize="30dp"
+                    android:text="DENUNCIAR" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#486ABF"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgbtnDenunciar"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="75dp"
+                android:background="@null"
+                android:onClick="irDenunciar"
+                android:src="@drawable/icono_alerta" />
+
+            <!--<View
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>-->
+
+            <ImageButton
+                android:id="@+id/imgbtnPerfil"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="46dp"
+                android:background="@null"
+                android:onClick="irMiPerfil"
+                android:src="@drawable/user_00000"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

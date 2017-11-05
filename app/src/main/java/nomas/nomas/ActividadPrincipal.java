@@ -1,30 +1,24 @@
 package nomas.nomas;
 
-import android.app.DownloadManager;
+import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.ListAdapter;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -39,7 +33,7 @@ public class ActividadPrincipal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad_principal);
-        view = (RecyclerView)(findViewById(R.id.tarjetas));
+        view = (RecyclerView) (findViewById(R.id.tarjetas));
         adapter = new DenunciasAdapter(ActividadPrincipal.this);
         view.setLayoutManager(new LinearLayoutManager(this));
         view.setAdapter(adapter);
@@ -47,7 +41,8 @@ public class ActividadPrincipal extends AppCompatActivity {
     }
 
     public void irDenunciar(View vista) {
-
+        Intent intent = new Intent(this, ActividadDenunciar.class);
+        startActivity(intent);
     }
 
     public void irMiPerfil(View vista) {
@@ -62,7 +57,7 @@ public class ActividadPrincipal extends AppCompatActivity {
         protected void onPostExecute(ArrayList<Denuncia> listaDenuncias) {
             super.onPostExecute(listaDenuncias);
             if (listaDenuncias != null) {
-                for ( int i = 0; i < listaDenuncias.size(); ++i) {
+                for (int i = 0; i < listaDenuncias.size(); ++i) {
                     Denuncia denuncia = listaDenuncias.get(i);
                     adapter.agregarDenuncia(denuncia);
                 }
@@ -113,8 +108,8 @@ public class ActividadPrincipal extends AppCompatActivity {
             ArrayList<Denuncia> denuncias = new ArrayList<>();
             Iterator<?> keys = resultado.keys();
 
-            while( keys.hasNext() ) {
-                String key = (String)keys.next();
+            while (keys.hasNext()) {
+                String key = (String) keys.next();
                 JSONObject jsonDenuncia = resultado.getJSONObject(key);
                 String nombre = jsonDenuncia.getString("nombre");
                 Integer edad = jsonDenuncia.getInt("edad");

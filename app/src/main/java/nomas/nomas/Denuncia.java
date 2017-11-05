@@ -34,4 +34,11 @@ class Denuncia {
     String zona;
     String rutaFoto;
     String datosAdicionales;
+
+    public Denuncia(String nombreDenuncia, Integer edadDenuncia, String situacionDenuncia, String horario) {
+        this.nombre = nombreDenuncia;
+        this.edad = edadDenuncia;
+        this.horario = horario;
+        this.situacion = situacionDenuncia;
+    }
 }

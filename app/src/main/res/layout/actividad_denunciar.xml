@@ -55,15 +55,67 @@
                 android:layout_height="350dp"
                 android:layout_width="match_parent"
                 android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DENUNCIAR"
+                    android:textSize="30dp"
+                    android:textColor="#b80c0c"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Situación: "
+                        android:textSize="25dp"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* "
+                        android:textColor="#b80c0c"
+                        android:textSize="25dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/situacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffffff"
+                    android:layout_margin="2dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Situación: "
+                    android:text="Nombre y Apellido: "
                     android:textSize="25dp"
                     android:textColor="#000000"/>
                 <TextView
+                    android:id="@+id/nombreApellido"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="50dp"
+                    android:background="#ffffff"
+                    android:layout_margin="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edad Estimada: "
+                    android:textSize="25dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:id="@+id/edadEstimada"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:background="#ffffff"
                     android:layout_margin="2dp" />
 

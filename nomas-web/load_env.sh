@@ -1,0 +1,5 @@
+export APIKEY=''
+export AUTH_DOMAIN=''
+export DATABASE_URL='https://nomas-2b0d9.firebaseio.com/'
+export STORAGE_BUCKET='gs://nomas-2b0d9.appspot.com/'
+export MESSAGING_SENDER_ID=''
